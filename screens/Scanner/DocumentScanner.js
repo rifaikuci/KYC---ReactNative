@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Animated, ActivityIndicator, Dimensions, Text, TouchableOpacity, View } from 'react-native';
-import Scanner, { Filters, FlashAnimation, RectangleOverlay } from 'react-native-rectangle-scanner';
 
 import { styles } from './styles';
 import CameraControls from './CameraControls';
+import Filters from '../../react-native-scanner/Filters';
+import RectangleOverlay from '../../react-native-scanner/RectangleOverlay';
+import Scanner from '../../react-native-scanner/Scanner';
 
 const JPEGQuality = 0.7;
 
@@ -46,8 +48,8 @@ const DocumentScanner = ({ closeScanner, onScannedImage }) => {
 
     const dimensions = Dimensions.get('window');
     setPreviewSize({
-      height: `${device.previewHeightPercent * 100}%`,
-      width: `${device.previewWidthPercent * 100}%`,
+      height: dimensions.height,
+      width: dimensions.width,
       marginTop: (1 - device.previewHeightPercent) * dimensions.height / 2,
       marginLeft: (1 - device.previewWidthPercent) * dimensions.width / 2,
     });

@@ -4,3 +4,5 @@ extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autoli
 rootProject.name = 'KYC'
 include ':app'
 includeBuild('../node_modules/@react-native/gradle-plugin')
+include ':openCVLibrary310'
+project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-rectangle-scanner/android/openCVLibrary310')

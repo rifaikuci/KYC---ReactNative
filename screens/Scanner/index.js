@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Text } from 'react-native';
+import {Button, StatusBar, Text} from 'react-native';
 import DocumentScanner from './DocumentScanner';
 import useIsMultiTasking from '../useIsMultiTasking';
-import { StatusBar } from 'expo-status-bar';
 
 const ScanDocument = () => {
 

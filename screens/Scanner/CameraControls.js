@@ -1,8 +1,8 @@
 import React from 'react';
 import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
-import { Filters } from 'react-native-rectangle-scanner';
 
 import { styles } from './styles';
+import Filters from '../../react-native-scanner/Filters';
 
 const CameraControls = ({ closeScanner, capture, isCapturing, flashIsAvailable, flashOn, setFlashOn, filterId, setFilterId }) => (
   <SafeAreaView style={[styles.overlay]}>
